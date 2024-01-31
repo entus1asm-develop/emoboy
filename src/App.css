@@ -1,38 +1,180 @@
-.App {
-  text-align: center;
+@charset "UTF-8";
+/* 
+&display=swap
+&subset=cyrillic-ext 
+*/
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+/*//////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* ОБНУЛЕНИЕ СТИЛЕЙ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li {
+  list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a,
+a:visited {
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+img {
+  vertical-align: top;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  /* по умолчанию */
+  /* font-size: 16px;  */
+}
+
+body {
+  line-height: 1;
+  color: #fff;
+  background-color: #EDEEF3;
+  font-family: "Roboto";
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+/* ------------------------------ */
+/* ------------------------------ */
+.main {
+  flex-grow: 1;
+}
+
+/* Условные ПК, ноуты и телевизоры */
+/* 1050 из макета (контейнер + отступы) */
+/* Условные планшеты */
+/* Условные мобилки */
+[class*=_ibg] img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+[class*=__container] {
+  max-width: 1410px;
+  margin: 0px auto;
+  padding: 0px 15px;
+}
+
+/* №1 */
+/* №2 */
+/* №3 */
+@media (max-width: 767.98px) {
+  [class*=__container] {
+    /* max-width: none; */
+  }
+}
+.main-top {
+  background-color: #196B78;
+  height: 295px;
+}
+.main-top__container {
+  text-align: center;
+}
+.main-top__title {
+  padding-top: 56px;
+  color: #CCF8FF;
+  font-size: 72px;
+  font-family: Inter;
+  font-weight: 700;
+}
+.main-top__title:not(:last-child) {
+  margin-bottom: 12px;
+}
+.main-top__text {
+  color: rgba(204, 248, 255, 0.75);
+  font-family: Inter;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.71;
+}
+
+.main-bottom__content {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main-bottom__input {
+  margin-top: -21px;
+  padding: 22px 0px 22px 32px;
+  width: 820px;
+  color: #ABB5BE;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 400;
+  border: 1px solid #DEE2E6;
+  border-radius: 4px;
+}
+.main-bottom__cards {
+  row-gap: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-bottom {
+  min-height: 100%;
+  width: 316px;
+  font-family: Inter;
+  color: #000;
+  text-align: center;
+  padding: 24px;
+  border: 1px solid #DEE2E6;
+  border-radius: 4px;
+  background-color: #fff;
 }
+.card-bottom__icon {
+  font-size: 36px;
+}
+.card-bottom__icon:not(:last-child) {
+  margin-bottom: 18px;
+}
+.card-bottom__value {
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: underline;
+  line-height: 1.64;
+}
+.card-bottom__value:not(:last-child) {
+  margin-bottom: 12px;
+}
+.main-bottom__content:not(:last-child) {
+  margin-bottom: 48px;
+}/*# sourceMappingURL=style.css.map */
